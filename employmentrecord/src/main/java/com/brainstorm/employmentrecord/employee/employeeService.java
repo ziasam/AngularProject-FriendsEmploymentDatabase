@@ -21,7 +21,7 @@ public class employeeService {
         return employeerepo.findAll();
     }
 
-    public Employee updateEmployeeById(long id, String email, String companyName, String previousCompany, long phone){
+    public Employee updateEmployeeById(long id, String email, String companyName, String previousCompany, String phone){
         Employee emp = employeerepo.findEmployeeById(id).orElseThrow(() -> new UserNotFound("No employee by this ID"));
 
         if(email != null)
@@ -51,7 +51,7 @@ public class employeeService {
             throw  new IllegalStateException("No prevousCompany selected");
         }
 
-        if(phone != 0)
+        if(phone.length() != 0)
         {
             emp.setPhone(phone);
         }

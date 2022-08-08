@@ -18,13 +18,13 @@ public class Employee implements Serializable {
     private String stack;
     private String companyName;
     private String previousCompany;
-    private long phone;
+    private String phone;
     private String imageUrl;
 
     public Employee() {
     }
 
-    public Employee(long id, String name, String email, String jobTitle, String stack, String companyName, String previousCompany, long phone, String imageUrl) {
+    public Employee(long id, String name, String email, String jobTitle, String stack, String companyName, String previousCompany, String phone, String imageUrl) {
         this.id = id;
         this.name = name;
         Email = email;
@@ -92,11 +92,11 @@ public class Employee implements Serializable {
         this.previousCompany = previousCompany;
     }
 
-    public long getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(long phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

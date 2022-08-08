@@ -44,8 +44,8 @@ public class employeeController {
        return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @PutMapping(path = {"/update/{id}"})
-    public ResponseEntity<Employee> updateEmployee(@PathVariable ("id") long id, @RequestParam(required = false) String email, @RequestParam(required = false) String companyName, @RequestParam(required = false) String previousCompany, @RequestParam(required = false) long phone)
+    @PostMapping(path = {"/update/{id}"})
+    public ResponseEntity<Employee> updateEmployee(@PathVariable ("id") long id, @RequestParam(required = false) String email, @RequestParam(required = false) String companyName, @RequestParam(required = false) String previousCompany, @RequestParam(required = false) String phone)
     {
         Employee emp = employeeservice.updateEmployeeById(id, email, companyName, previousCompany, phone);
         return new ResponseEntity<>(emp, HttpStatus.OK);
