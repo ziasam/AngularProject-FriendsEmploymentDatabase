@@ -20,11 +20,15 @@ public class Employee implements Serializable {
     private String previousCompany;
     private String phone;
     private String imageUrl;
+    private String linkedinUrl;
+    private String facebookUrl;
+    private String skypeUrl;
+    private String twitterUrl;
 
     public Employee() {
     }
 
-    public Employee(long id, String name, String email, String jobTitle, String stack, String companyName, String previousCompany, String phone, String imageUrl) {
+    public Employee(long id, String name, String email, String jobTitle, String stack, String companyName, String previousCompany, String phone, String imageUrl, String facebookUrl, String linkedinUrl, String skypeUrl, String twitterUrl) {
         this.id = id;
         this.name = name;
         Email = email;
@@ -34,6 +38,10 @@ public class Employee implements Serializable {
         this.previousCompany = previousCompany;
         this.phone = phone;
         this.imageUrl = imageUrl;
+        this.facebookUrl = facebookUrl;
+        this.skypeUrl = skypeUrl;
+        this.linkedinUrl = linkedinUrl;
+        this.twitterUrl = twitterUrl;
     }
 
     public long getId() {
@@ -108,6 +116,38 @@ public class Employee implements Serializable {
         this.imageUrl = imageUrl;
     }
 
+    public String getLinkedinUrl() {
+        return linkedinUrl;
+    }
+
+    public void setlinkedinUrl(String linkedinUrl) {
+        this.linkedinUrl = linkedinUrl;
+    }
+
+    public String getfacebookUrl() {
+        return facebookUrl;
+    }
+
+    public void setfacebookUrl(String facebookUrl) {
+        this.facebookUrl = facebookUrl;
+    }
+
+    public String getskypeUrl() {
+        return skypeUrl;
+    }
+
+    public void setskypeUrl(String skypeUrl) {
+        this.skypeUrl = skypeUrl;
+    }
+
+    public String gettwitterUrl() {
+        return twitterUrl;
+    }
+
+    public void setTwitterUrl(String twitterUrl) {
+        this.twitterUrl = twitterUrl;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -119,6 +159,11 @@ public class Employee implements Serializable {
                 ", companyName='" + companyName + '\'' +
                 ", previousCompany='" + previousCompany + '\'' +
                 ", phone='" + phone + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", linkedinUrl='" + linkedinUrl + '\'' +
+                ", facebookUrl='" + facebookUrl + '\'' +
+                ", skypeUrl='" + skypeUrl + '\'' +
+                ", twitterUrl='" + twitterUrl + '\'' +
                 '}';
     }
 }

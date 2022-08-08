@@ -65,8 +65,8 @@ public class employeeService {
 
     public Employee addEmployee(Employee employee)
     {
-        Optional<Employee> Optional = employeerepo.findEmployeeById(employee.getId());
-        if(Optional.isEmpty())
+        Optional<Employee> Emp = employeerepo.findEmployeeById(employee.getId());
+        if(Emp.isEmpty())
         {
             return employeerepo.save(employee);
         }
